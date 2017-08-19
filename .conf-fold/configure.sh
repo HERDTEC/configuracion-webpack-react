@@ -28,8 +28,7 @@
         yarn add react-hot-loader@^3.0.0-beta.6 --dev
 ########## Instalacion de loader para sass
         yarn add sass-loader node-sass --dev
-########## Instalacion de loader para pug
-        yarn add pug-html-loader node-sass --dev
+
 
 ####################################
 # Instalar webpack

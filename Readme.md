@@ -79,7 +79,7 @@ Muestra que componentes estan hechos directamente en pantalla
 
     
       ## Tener cuidado con este loader ya que si no se especifica la version, se instala la version ^1.3.1 y no funciona
-        yarn add pug-html-loader node-sass --dev
+
 
 4. Instalar webpack
     *Instalacion de paquetes 
