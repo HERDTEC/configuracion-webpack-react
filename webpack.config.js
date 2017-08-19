@@ -61,8 +61,8 @@ module.exports = {
             options: { modules:true }
           }
         ]
-      }
-      /*scss
+      },
+      /*scss*/
       {
         test: /\.scss$/,
         exclude: /(node_modules|bower_components)/,
@@ -73,7 +73,7 @@ module.exports = {
         }, {
             loader: "sass-loader" // compiles Sass to CSS 
         }]
-      },*/
+      },
       
     ]
   },
