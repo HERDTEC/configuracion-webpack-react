@@ -56,17 +56,30 @@ Muestra que componentes estan hechos directamente en pantalla
     `yarn add react react-dom`
 
 3. Instalar Babel
-    *Instalacion de paquetes de babel
+* Instalacion de paquetes de babel
 
-    `yarn add babel-core babel-loader --dev`
+  `yarn add babel-core babel-loader --dev`
+
+* Instalacion de presets
+
+  `yarn add babel-preset-env babel-preset-react --dev`
+
+* Instalacion de loaders
+   - Instalacion de loaders para css y json
     
-    *Instalacion de presets
+     `yarn add css-loader json-loader style-loader --dev`
+    
+    - Instalacion de loader para sass
+    
+      `yarn add sass-loader node-sass --dev`
+    
+    - **Soporte para hot loader**
 
-    `yarn add babel-preset-env babel-preset-react --dev`
+      `yarn add react-hot-loader@^3.0.0-beta.6 --dev`
 
-    *Instalacion de loaders
-
-    `yarn add css-loader json-loader react-hot-loader style-loader --dev`
+    
+      ## Tener cuidado con este loader ya que si no se especifica la version, se instala la version ^1.3.1 y no funciona
+        yarn add pug-html-loader node-sass --dev
 
 4. Instalar webpack
     *Instalacion de paquetes 
