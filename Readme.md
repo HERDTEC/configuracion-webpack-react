@@ -22,8 +22,7 @@ Libreria orientada al disenio de interfaces de usuario el cual permite la rendiz
 ..
 ```
 
-### Herramientas de desarrollo?
-#### Webpack
+
 
 ### Herramientas complementarias
 #### Plugins Browser
@@ -87,7 +86,94 @@ Muestra que componentes estan hechos directamente en pantalla
     `yarn add webpack webpack-dev-server --dev`
 
 
+#### Configuracion de webpack
++ **Resolve:** *Bloque en el cual se especifica cada una de las extenciones de los archivos que web pack tiene que resolver*
+    ```  
+    resolve: {
+        extensions: ['.js', '.jsx', '.json', '.css', 'scss']
+    },
 
+    ```
++ **cache:** *Bloque en el cual se especifica si va a estar activado el cache. Es conveniente dejarla activa para que se mas velos la recarga*
+    ```  
+    cache: true,
+
+    ```
+
++ **cache:** *Bloque en el cual se especifica si va a estar activado el cache. Es conveniente dejarla activa para que se mas velos la recarga*
+    - **react-hot-loader/patch:**  *Activa Hot Module Reloading para react*
+    - **webpack-dev-server/client?http://localhost:3000':**  *Activa Hot Module Reloading para react*
+    - **react-hot-loader/patch:**  *Para que webpack enlace el servidor con el bundle final*
+
+    ```  
+    entry: [
+        'react-hot-loader/patch', 
+        'webpack-dev-server/client?http://localhost:3000', 
+        'webpack/hot/only-dev-server', 
+        './src/app.jsx'
+    ],
+
+    ```
+
++ **output:** *Bloque en el cual se define la ruta absoluta en donde se almacenara los archivos procesados*
+    
+    ```  
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'app.js',
+    publicPath: '/' /*  */
+  },
+    ```
+    ### publicPath es un parametro necesario para el Hot Reloading
+
++ **rulers:** *Bloque en el cual se define las transformaciones, por cada transformacion que se requiera debera crearse una regla
+   - **test:**  *Exprecion regular que apunte a las extenciones de archivos que queremos transformar*
+   - **loader:**  *Nombre del loader necesario para hacer la transformacion* 
+    
+    ```  
+    module:{
+        rulers:{
+            {
+                test: /$/, 
+                use: {
+                        loader: 'nombre-loader'    
+                }
+            }
+        }
+        rulers:{
+            {
+                test: /$/, 
+                use: {
+                        loader: 'nombre-loader'    
+                }
+            }
+        }
+    }
+     
+    ```
++ **plugins:** *Plugins necesarios para usar el reload automatico*
+    
+    ```  
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin
+    ],
+    devtool: 'inline-source-map',
+    ```
++ **devServer:** *Parametros para el servidor*
+   - **hot:**  *Especifica que vamo a utilizar el modulo de hot reload* 
+   - **contentBase:**  *Defines donde va a estar la carpeta de archivos transformados* 
+
+    ```  
+    devServer: {
+        hot: true,
+        contentBase: endPath, /* */
+        inline: true,/**/
+        compress: true,
+        port: port,
+        publicPath: '/'
+    }`
+    ```
 
 
     
