@@ -1,11 +1,13 @@
 {
-  "name": "nkrgo-web-confm",
+  "name": "nkrgo-web-confM",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
     "url": "git@github.com:IngPaul/nkrgo-web-m.git",
     "type": "git"
   },
+  "author": "Paul Cuichan <ing.paul.cuixan@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "test": "eslint src/index/js",
     "build": "webpack --colors --progress",
@@ -13,21 +15,18 @@
     "start": "npm run build && npm run serve",
     "production": "webpack -p"
   },
-  "author": "Paul Cuichan <ing.paul.cuixan@gmail.com>",
-  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.1",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.5",
-    "eslint": "^4.4.1",
+    "eslint": "^4.5.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.2.1",
     "json-loader": "^0.5.7",
     "node-sass": "^4.5.3",
-    "pug-html-loader": "^1.1.5",
     "react-hot-loader": "^3.0.0-beta.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",

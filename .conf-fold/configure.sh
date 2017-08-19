@@ -1,8 +1,7 @@
+
 ####################################
 #Inicializar proyecto
     yarn init -y
-##### Copiar archivo .gitignore
-    cp .conf-fold/.gitignore .gitignore
 
 ####################################
 # Instalar eslint
@@ -10,7 +9,7 @@
     yarn global add eslint
     yarn add eslint eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y  --dev
 ##### Copiar archivo .eslitrc.json
-    cp .conf-fold/.eslitrc .eslitrc
+    cp ./.conf-fold/.eslintrc .eslintrc
 
 ####################################
 # Instalar React
@@ -32,14 +31,21 @@
 
 
 ####################################
-# Instalar webpack
-yarn add webpack webpack-dev-server --dev
+##########Instalar webpack
+        yarn add webpack webpack-dev-server --dev
 
 
 ####################################
 # Copiar codigo base y configuraciones
+##### copiar archivo babelr
+    cp ./.conf-fold/.babelrc .babelrc
 ##### Copiar archivo de configuracion de wbpack
-    cp .conf-fold/webpack.config.js webpack.config.js
+    cp ./.conf-fold/webpack.config.js webpack.config.js
+##### Copiar archivo .gitignore
+    cp .conf-fold/.gitignore .gitignore
+##### Copiar codigo base
+    cp -rf ./.conf-fold/src ./src
+    cp -rf ./.conf-fold/build ./build
 
 ##### Solicitar al usuario que copie y pegue bloque de codigo de package.json
 echo "Porfavor copie el bloque de codigo en su package.json\n"
