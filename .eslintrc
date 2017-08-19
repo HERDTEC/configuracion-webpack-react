@@ -10,8 +10,7 @@
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
             "jsx": true
-        },
-        "sourceType": "module"
+        }
     },
     "plugins": [
         "react"
@@ -36,6 +35,21 @@
         "semi": [
             "error",
             "never"
+        ],
+        "keyword-spacing": 
+        [
+            "error",
+            { "before": true }
+        ],
+        "space-before-function-paren": 
+        [
+            "error", 
+            "always"
+        ],
+        "eqeqeq": 
+        [
+            "error", 
+            "always"
         ]
     }
 }

@@ -7,9 +7,10 @@
 ####################################
 # Instalar eslint
 ##### Instalacion de paquetes
+    yarn global add eslint
     yarn add eslint eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y  --dev
 ##### Copiar archivo .eslitrc.json
-    cp .conf-fold/.eslitrc.json .eslitrc.json
+    cp .conf-fold/.eslitrc .eslitrc
 
 ####################################
 # Instalar React
@@ -33,4 +34,18 @@
 ####################################
 # Instalar webpack
 yarn add webpack webpack-dev-server --dev
+
+
+####################################
+# Copiar codigo base y configuraciones
+##### Copiar archivo de configuracion de wbpack
+    cp .conf-fold/webpack.config.js webpack.config.js
+
+##### Solicitar al usuario que copie y pegue bloque de codigo de package.json
+echo "Porfavor copie el bloque de codigo en su package.json\n"
+    cat .conf-fold/package.json
+
+echo "\nDespues de copiar el bloque de codigo ejecutar"
+echo "\nyarn run serve\n"
+echo "Para inicializar el proyecto"
 

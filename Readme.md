@@ -1,4 +1,20 @@
 # NKRGO
+## Instalacion
+1. Instalar paquetes
+  
+   `yarn install`
+
+2. Inicializar proyecto
+  
+   `yarn run serve`
+## Crear un nuevo proyecto con configure.sh
+1. Copiar carpeta .conf-fold a carpeta de proyecto
+  
+2. Ejecutar desde el terminal en el path de la carpeta base del proyecto 
+  
+   `sh ./.conf-fold/configure.sh`
+
+# Tecnologias
 ## Que es React
 Libreria orientada al disenio de interfaces de usuario el cual permite la rendizacion inmediata.
 
@@ -86,7 +102,7 @@ Muestra que componentes estan hechos directamente en pantalla
     `yarn add webpack webpack-dev-server --dev`
 
 
-#### Configuracion de webpack
+#### 1. Configuracion de webpack
 + **Resolve:** *Bloque en el cual se especifica cada una de las extenciones de los archivos que web pack tiene que resolver*
     ```  
     resolve: {
@@ -175,5 +191,25 @@ Muestra que componentes estan hechos directamente en pantalla
     }`
     ```
 
+#### 2. Configuracion del archivo package.json
+* Ubicar en la seccion de scripts el siguiente bloque
+  ```
+    "scripts": {
+        "build": "webpack --colors --progress",
+        "serve": "webpack-dev-server --colors --progress",
+        "start": "npm run build && npm run serve",
+        "production": "webpack -p"
+    },
+
+  ```
+#### 3. Configuracion del archivo .babelrc
+ ```
+{
+    "presets": [["env", { "modules": false }], "react"],
+    "plugins": [
+        "react-hot-loader/babel"
+    ]
+}
+ ```
 
     

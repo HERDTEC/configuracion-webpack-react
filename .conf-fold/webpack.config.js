@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const path = require('path')
 /* eslint-disable */
 const endPath = path.resolve(__dirname, 'build')
+const port = 9001;
 module.exports = {
   /* Que extenciones va resolviendo */
   resolve: {
@@ -13,7 +14,7 @@ module.exports = {
   cache: true,
   entry: [
     'react-hot-loader/patch', /* Activa Hot Module Reloading para react */
-    'webpack-dev-server/client?http://localhost:9000', /* Para que webpack enlace el servidor con el bundle final*/
+    'webpack-dev-server/client?http://localhost:'+port, /* Para que webpack enlace el servidor con el bundle final*/
     'webpack/hot/only-dev-server', 
     './src/app.jsx'
   ],
@@ -60,8 +61,8 @@ module.exports = {
             options: { modules:true }
           }
         ]
-      }
-      /*scss
+      },
+      /*scss*/
       {
         test: /\.scss$/,
         exclude: /(node_modules|bower_components)/,
@@ -72,7 +73,7 @@ module.exports = {
         }, {
             loader: "sass-loader" // compiles Sass to CSS 
         }]
-      },*/
+      },
       
     ]
   },
@@ -87,7 +88,7 @@ module.exports = {
     contentBase: endPath, /* Defines donde va a estar la carpeta final*/
     inline: true,/* Permite hacer los cambios realizados al momento*/
     compress: true,
-    port: 9000,
+    port: port,
     publicPath: '/'
   }
 }
