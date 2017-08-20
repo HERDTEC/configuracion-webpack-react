@@ -1,5 +1,5 @@
 {
-  "name": "nkrgo-web-confM",
+  "name": "nkrgo-web-confm",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
@@ -9,7 +9,7 @@
   "author": "Paul Cuichan <ing.paul.cuixan@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "eslint src/index/js",
+    "lint": "eslint src/index/js",
     "build": "webpack --colors --progress",
     "serve": "webpack-dev-server --colors --progress",
     "start": "npm run build && npm run serve",
@@ -22,9 +22,13 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.5",
     "eslint": "^4.5.0",
+    "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.2.1",
+    "eslint-plugin-standard": "^3.0.1",
     "json-loader": "^0.5.7",
     "node-sass": "^4.5.3",
     "react-hot-loader": "^3.0.0-beta.6",

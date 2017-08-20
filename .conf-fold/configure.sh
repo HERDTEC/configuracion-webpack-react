@@ -7,9 +7,11 @@
 # Instalar eslint
 ##### Instalacion de paquetes
     yarn global add eslint
-    yarn add eslint eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y  --dev
+    yarn add eslint eslint-config-standard eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-standard --dev
 ##### Copiar archivo .eslitrc.json
     cp ./.conf-fold/.eslintrc .eslintrc
+
+
 
 ####################################
 # Instalar React

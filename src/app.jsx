@@ -1,6 +1,6 @@
-import React from 'react' // eslint-disable-line no-unused-vars
+import React from 'react'
 import ReactDOM from 'react-dom'
-import HolaMundo from './components/hola-mundo/hola-mundo' // eslint-disable-line no-unused-vars
+import HolaMundo from './components/hola-mundo/hola-mundo'
 import './app.css'
 ReactDOM.render(
   <HolaMundo/>,
